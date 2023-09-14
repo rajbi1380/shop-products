@@ -1,0 +1,154 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+}
+
+#hero {
+  background: linear-gradient(0deg, rgb(42, 44, 57) 0%, rgb(51, 54, 74) 100%);
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+
+  padding: 0;
+}
+#hero a {
+  color: #ffff;
+  text-align: center;
+  margin: 200px auto;
+  font-weight: 700;
+  font-size: 60px;
+  transition: all 0.4s;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+#hero a:hover {
+  font-size: 70px;
+  cursor: pointer;
+}
+#logo {
+  color: #ffff;
+}
+.hero-waves {
+  display: block;
+  width: 100%;
+  height: 60px;
+
+  position: absolute;
+}
+.wave1 use {
+  animation: move-forever1 10s linear infinite;
+  animation-delay: -2s;
+}
+
+.wave2 use {
+  animation: move-forever2 8s linear infinite;
+  animation-delay: -2s;
+}
+
+.wave3 use {
+  animation: move-forever3 6s linear infinite;
+  animation-delay: -2s;
+}
+@keyframes move-forever2 {
+  0% {
+    transform: translate(-90px, 0%);
+  }
+
+  100% {
+    transform: translate(85px, 0%);
+  }
+}
+
+@keyframes move-forever3 {
+  0% {
+    transform: translate(-90px, 0%);
+  }
+
+  100% {
+    transform: translate(85px, 0%);
+  }
+}
+
+.about {
+  padding-bottom: 70px;
+  padding-top: 100px;
+  background-color: #ffff;
+}
+.btn-login {
+  border: 0;
+  outline: 0;
+  color: #ffff;
+  font-size: 20px;
+  text-decoration: none;
+  font-weight: 500;
+  background: linear-gradient(rgb(51, 54, 74));
+  padding: 10px 25px;
+  transition: all 0.5s;
+}
+.btn-login:hover {
+  cursor: pointer;
+
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
+    rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+    rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+}
+.section-title {
+  padding-bottom: 40px;
+}
+
+.section-title h2 {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 0;
+  line-height: 1px;
+  margin: 0 0 5px 0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #aaaaaa;
+  font-family: "Poppins", sans-serif;
+}
+
+.section-title h2::after {
+  content: "";
+  width: 120px;
+  height: 1px;
+  display: inline-block;
+  background: rgb(51, 54, 74);
+  margin: 4px 10px;
+}
+
+.section-title p {
+  margin: 0;
+  margin: 0;
+  font-size: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  color: #2a2c39;
+}
+.about .content ul {
+  list-style: none;
+  padding: 0;
+}
+.btn-learn-more {
+  border-radius: 10px;
+
+  color: #0f172a;
+  font-size: 20px;
+  text-decoration: none;
+  padding: 10px 30px;
+  font-weight: 700;
+  transition: all 0.5s;
+  border: 2px solid #0f172a;
+}
+.btn-learn-more:hover {
+  border: 0;
+  outline: 0;
+  background-color: #0f172a;
+  color: #ffff;
+}

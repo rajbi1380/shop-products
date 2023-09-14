@@ -13,6 +13,7 @@ let listIcon = document.querySelector(".list-icon");
 let menu = document.querySelector(".menu");
 let closeMenu = document.querySelector(".close-menu");
 let creatbtn = document.querySelector(".creat-btn");
+let count = document.querySelector(".count");
 
 CartIcon.addEventListener("click", openYourCart);
 function openYourCart(e) {
@@ -26,6 +27,11 @@ function closeYourCart() {
 
 CartAdd.forEach((cart) => {
   cart.addEventListener("click", function add(e) {
+    let total = 0;
+    let num = Number(count.innerHTML);
+    total = num + 1;
+    count.innerText = total;
+    console.log(total);
     let target = e.target;
 
     let check = target.parentElement.parentElement.parentElement;
@@ -51,7 +57,6 @@ CartAdd.forEach((cart) => {
     </div>`;
 
     CartContact.forEach((carts) => {
-      console.log(carts);
       cartbox.innerHTML = contact;
 
       carts.appendChild(cartbox);
@@ -64,7 +69,9 @@ CartAdd.forEach((cart) => {
     document.querySelectorAll(".remove-box").forEach((removeicon) => {
       removeicon.addEventListener("click", (e) => {
         let target = e.target;
+        count.innerText = num--;
         let removeitem = target.parentElement.parentElement.parentElement;
+
         removeitem.remove();
       });
     });
@@ -84,7 +91,6 @@ function updatecart() {
     let valuequantity = quantity.value;
 
     total = total + valuequantity * repprice;
-    console.log(total);
   });
   document.querySelector(".total-price").innerHTML = "$" + total;
 }
@@ -101,6 +107,7 @@ btnbuy.addEventListener("click", () => {
   CartContact.forEach((item) => {
     item.remove();
     document.querySelector(".total-price").innerHTML = "$0";
+    count.innerText = "0";
   });
   updatecart();
 });
@@ -114,7 +121,7 @@ btnSend.addEventListener("click", (e) => {
   let inputNamevalue = inputName.value;
   let inputSubjectvalue = inputSubject.value;
   let inputTextvalue = inputText.value;
-  console.log(inputTextvalue);
+
   let isRes = true;
   if (
     inputEmailvalue.indexOf("@") == -1 ||

@@ -24,6 +24,23 @@ a {
   cursor: pointer;
   color: #0f172a;
 }
+.group-icon .count {
+  display: block;
+
+  font-size: 15px;
+  top: -8px;
+  right: -18px;
+  position: absolute;
+
+  line-height: 24px;
+  height: 25px;
+  background-color: #0f172a;
+  border-radius: 50%;
+  color: #fff;
+  width: 25px;
+
+  text-align: center;
+}
 .menu {
   position: absolute;
   right: -500px;
@@ -239,6 +256,16 @@ h1 {
 #logo {
   color: #0f172a;
 }
+.arrow {
+ 
+  text-decoration: none;
+   color: #0f172a;
+ cursor: pointer;
+  transform: rotate(180deg);
+  margin-right: 10px;
+  font-size: 30px;
+}
+
 .cart-product {
   margin: 10px 0;
   transition: all 0.4s;
@@ -342,5 +369,3 @@ form button:hover {
   border-bottom: 1px solid #0f172a;
 }
 /*...*/
-
-
