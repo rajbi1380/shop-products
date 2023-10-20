@@ -26,7 +26,7 @@ function closeYourCart() {
 }
 
 CartAdd.forEach((cart) => {
-  cart.addEventListener("click", function add(e) {
+  cart.addEventListener("click", (e)=> {
     let total = 0;
     let num = Number(count.innerHTML);
     total = num + 1;
@@ -73,6 +73,7 @@ CartAdd.forEach((cart) => {
         let removeitem = target.parentElement.parentElement.parentElement;
 
         removeitem.remove();
+            updatecart();
       });
     });
 
