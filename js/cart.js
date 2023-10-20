@@ -17,6 +17,7 @@ let count = document.querySelector(".count");
 
 CartIcon.addEventListener("click", openYourCart);
 function openYourCart(e) {
+
   e.preventDefault();
   YourCart.classList.add("active");
 }
@@ -31,7 +32,8 @@ CartAdd.forEach((cart) => {
     let num = Number(count.innerHTML);
     total = num + 1;
     count.innerText = total;
-    console.log(total);
+
+    
     let target = e.target;
 
     let check = target.parentElement.parentElement.parentElement;
@@ -63,7 +65,7 @@ CartAdd.forEach((cart) => {
     });
     let quentityInputs = document.querySelectorAll(".quantity-box");
     quentityInputs.forEach((input) => {
-      console.log(input);
+   
       input.addEventListener("change", quantitychange);
     });
     document.querySelectorAll(".remove-box").forEach((removeicon) => {
@@ -97,7 +99,7 @@ function updatecart() {
 }
 function quantitychange(e) {
   let inputvalue = e.target;
-  console.log(inputvalue);
+
   if (isNaN(inputvalue.value) || inputvalue.value <= 0) {
     inputvalue.value = 1;
   }
